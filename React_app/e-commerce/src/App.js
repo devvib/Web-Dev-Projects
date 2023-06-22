@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./images/logo1.jpg";
+import style from './App.module.css';
+// import { ProductData } from "./ProductData";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div >
+      <header >
+     <nav className={style.TopBar}>
+      <img src={logo} alt="Amazon Logo"/>
+     </nav>
       </header>
+      <div className={style.MainContainer}>
+      <img src="https://imgur.com/iOeUBV7.png" alt="Product preview"/>
+
+
+      </div>
     </div>
   );
 }
