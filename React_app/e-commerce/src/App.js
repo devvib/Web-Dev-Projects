@@ -1,17 +1,34 @@
-import logo from "./images/logo1.jpg";
 import style from './App.module.css';
-// import { ProductData } from "./ProductData";
+import { useState } from "react";
+import ProductData from "./ProductData";
+import ProductPreview from "./ProductPreview";
+import ProductDetails from "./ProductDetails";
+import Topbar from "./Topbar";
+console.clear();
 function App() {
+  const [index, setIndex] = useState(0);
+  const [toggle,setToggle]=useState(0);
+  function onColorOptionClick(pos) {
+    setIndex(pos);
+  }
+  function onFeatureOptionClick(pos) {
+    console.log(pos);
+    setToggle(pos);
+  }
   return (
-    <div >
-      <header >
-     <nav className={style.TopBar}>
-      <img src={logo} alt="Amazon Logo"/>
-     </nav>
-      </header>
-      <div className={style.MainContainer}>
-      <img src="https://imgur.com/iOeUBV7.png" alt="Product preview"/>
 
+
+    <div >
+      <Topbar />
+
+      <div className={style.MainContainer}>
+        <div className={style.ProductPreview}>
+          <ProductPreview ImgData={ProductData.colorOptions[index]} FeatureData={toggle} />
+        </div>
+
+        <div className={style.ProductData}>
+          <ProductDetails data={ProductData} onColorOptionClick={onColorOptionClick} onFeatureOptionClick={onFeatureOptionClick} Index={index} Toggle={toggle}/>
+        </div>
 
       </div>
     </div>
