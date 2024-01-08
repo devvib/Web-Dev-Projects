@@ -4,4 +4,15 @@ It also allows for creating, updating, and deleting posts.Highlights🏗️ Buil
 📚 Display blog posts with titles, dates, authors, and content
 ➕ Create new posts
 ✏️ Update existing posts
-❌ Delete posts
+❌ Delete posts.
+
+This project also contains backend for making api request and displaying result on a frontend.
+Tech involves:
+Node.js
+Express.js
+axios
+ejs
+html
+css
+
+
